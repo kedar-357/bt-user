@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BT Business Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              bt: {
+                purple: '#5514B4',
+                dark: '#330072',
+                green: '#6CBC35',
+                saffron: '#FD9F3E',
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      :root {
+        color-scheme: light;
+      }
+      
+      html.dark {
+        color-scheme: dark;
+      }
+
+      body {
+        font-family: 'Inter', sans-serif;
+        color: #330072;
+        background-color: #f9fafb !important;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+
+      .dark body {
+        color: #f9fafb;
+        background-color: #1a003a !important; /* Slightly darker than BT Dark Purple for depth */
+      }
+
+      /* Extreme Light Scrollbar Reset */
+      * {
+        scrollbar-width: thin;
+        scrollbar-color: #d1d5db #f1f1f1 !important;
+      }
+
+      .dark * {
+        scrollbar-color: #5514B4 #1a003a !important;
+      }
+
+      /* Webkit specific scrollbar styling */
+      ::-webkit-scrollbar {
+        width: 10px !important;
+        height: 10px !important;
+        background-color: #f1f1f1 !important;
+      }
+      
+      .dark ::-webkit-scrollbar {
+        background-color: #1a003a !important;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1 !important;
+      }
+      
+      .dark ::-webkit-scrollbar-track {
+        background: #1a003a !important;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background-color: #d1d5db !important;
+        border-radius: 10px !important;
+        border: 2px solid #f1f1f1 !important;
+      }
+
+      .dark ::-webkit-scrollbar-thumb {
+        background-color: #5514B4 !important;
+        border: 2px solid #1a003a !important;
+      }
+      
+      ::-webkit-scrollbar-thumb:hover {
+        background-color: #9ca3af !important;
+      }
+
+      ::-webkit-scrollbar-corner {
+        background: #f1f1f1 !important;
+      }
+
+      /* Prevent any black backgrounds on inputs or containers */
+      div, main, section, aside, header, footer {
+        background-color: transparent;
+      }
+
+      input:-webkit-autofill,
+      input:-webkit-autofill:hover, 
+      input:-webkit-autofill:focus, 
+      input:-webkit-autofill:active{
+          -webkit-box-shadow: 0 0 0 1000px white inset !important;
+          -webkit-text-fill-color: #111827 !important;
+      }
+
+      .dark input:-webkit-autofill {
+          -webkit-box-shadow: 0 0 0 1000px #330072 inset !important;
+          -webkit-text-fill-color: #f9fafb !important;
+      }
+      
+      input, select, textarea {
+        background-color: white !important;
+        color: #111827 !important;
+      }
+
+      .dark input, .dark select, .dark textarea {
+        background-color: #330072 !important;
+        color: #f9fafb !important;
+        border-color: #4c1d95 !important;
+      }
+      
+      /* Global fade in for page transitions */
+      .animate-fade-in {
+        animation: fadeIn 0.3s ease-in-out;
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(5px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "recharts": "https://esm.sh/recharts@^3.7.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.38.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-gray-50 dark:bg-[#1a003a]">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
